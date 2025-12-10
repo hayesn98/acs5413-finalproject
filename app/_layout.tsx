@@ -1,10 +1,63 @@
-import React from 'react';
-import { Stack } from 'expo-router';
+import FontAwesome from "@expo/vector-icons/FontAwesome";
+import * as Notifications from "expo-notifications";
+import { Tabs } from "expo-router";
 
-const Layout = () => (
-	<Stack>
-		<Stack.Screen name="index" options={{ title: 'Home', headerTitleAlign: 'center'}} />
-	</Stack>
-);
+Notifications.setNotificationHandler({
+    handleNotification: async () => {
+        return {
+            shouldPlaySound: false,
+            shouldSetBadge: false,
+            shouldShowAlert: true,
+            shouldShowBanner: true,
+            shouldShowList: true,
+        };
+    }
+});
 
-export default Layout;
+
+export default function Layout() {
+    return (
+        <Tabs screenOptions={{
+            tabBarActiveTintColor: "#841617",
+            headerShown: false
+        }}>
+            <Tabs.Screen
+                name="delivery"
+                options={{
+                    title: "Delivery",
+                    tabBarIcon: ({ color, size }) => (
+                        <FontAwesome name="th-large" color={color} size={size} />
+                    )
+                }}
+            />
+
+            <Tabs.Screen
+                name="pickup"
+                options={{
+                    title: "Pickup",
+                    tabBarIcon: ({ color, size }) => (
+                        <FontAwesome name="th-large" color={color} size={size} />
+                    )
+                }}
+            />
+
+            <Tabs.Screen
+                name="cart"
+                options={{
+                    title: "Cart",
+                    tabBarIcon: ({ color, size }) => (
+                        <FontAwesome name="shopping-cart" color={color} size={size} />
+                    ),
+                }}
+            />
+
+            <Tabs.Screen
+                name="map"
+                options={{
+                    tabBarItemStyle: { display: "none" },
+                }}
+            />
+
+        </Tabs>
+    );
+}
