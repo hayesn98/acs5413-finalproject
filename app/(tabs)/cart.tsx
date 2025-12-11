@@ -71,7 +71,7 @@ export default function CartScreen() {
 
     if (loading) {
         return (
-            <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
+            <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#323232" }}>
                 <ActivityIndicator size="large" color="#841617" />
             </View>
         );
@@ -79,8 +79,8 @@ export default function CartScreen() {
 
     if (items.length === 0) {
         return (
-            <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-                <Text style={{ fontSize: 18 }}>Your cart is empty.</Text>
+            <View style={{ flex: 1, justifyContent: "center", alignItems: "center", backgroundColor: "#323232" }}>
+                <Text style={{ fontSize: 18, color: "#f0f0f0" }}>Your cart is empty.</Text>
             </View>
         );
     }
@@ -96,12 +96,12 @@ export default function CartScreen() {
                         style={{
                             padding: 20,
                             marginBottom: 16,
-                            backgroundColor: "#f5f5f5",
+                            backgroundColor: "#323232",
                             borderRadius: 12,
                         }}
                     >
-                        <Text style={{ fontSize: 18 }}>{item.name}</Text>
-                        <Text style={{ marginTop: 4, color: "gray" }}>Qty: {item.quantity}</Text>
+                        <Text style={{ fontSize: 18, color: "#f0f0f0" }}>{item.name.charAt(0).toUpperCase() + item.name.slice(1)}</Text>
+                        <Text style={{ marginTop: 4, color: "#f0f0f0" }}>Quantity: {item.quantity}</Text>
 
                         <TouchableOpacity
                             style={{

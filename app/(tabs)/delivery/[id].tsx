@@ -7,7 +7,7 @@ type Tile = {
 };
 
 const tileSets: Record<string, Tile[]> = {
-    pizzaff: [{ label: "Pepperoni" }, { label: "Margherita" }, { label: "Cheese"}, { label: "Meat Lovers"} ],
+    pizzaff: [{ label: "Pepperoni Pizza" }, { label: "Margherita Pizza" }, { label: "Cheese Pizza"}, { label: "Meat Lovers Pizza"} ],
     burgerff: [{ label: "Plain Burger" }, { label: "Cheeseburger" }, { label: "Mushroom and Swiss" }],
     coffeeshop: [{ label: "Black Coffee" }, { label: "Flat White" }, { label: "Espresso" }, { label: "Cappuccino" }],
     friedchicken: [{ label: "Chicken Basket" }, { label: "Chicken Nuggets" }, { label: "Chicken Fingers" }, { label: "BBQ Sauce" }],
@@ -16,7 +16,7 @@ const tileSets: Record<string, Tile[]> = {
 };
 
 export default function DeliveryDetailScreen() {
-    const { id } = useLocalSearchParams<{ id: string }>();
+    const { id, label } = useLocalSearchParams<{ id: string; label?: string }>();
 
     const tiles: Tile[] = id ? tileSets[id] || [] : [];
 
@@ -31,9 +31,9 @@ export default function DeliveryDetailScreen() {
     }
 
     return (
-        <ScrollView contentContainerStyle={{ padding: 20, gap: 20 }}>
-            <Text style={{ fontSize: 26, marginBottom: 10 }}>
-                {id?.toUpperCase()}
+        <ScrollView contentContainerStyle={{ padding: 20, gap: 20, backgroundColor: "#323232", flexGrow: 1 }}>
+            <Text style={{ fontSize: 26, marginBottom: 10, color: "#f0f0f0" }}>
+                {label?.toUpperCase()}
             </Text>
 
         {tiles.map((tile, index) => (

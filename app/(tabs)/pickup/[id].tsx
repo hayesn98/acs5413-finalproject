@@ -16,7 +16,7 @@ const tileSets: Record<string, Tile[]> = {
 };
 
 export default function PickupDetailScreen() {
-    const { id } = useLocalSearchParams<{ id: string }>();
+    const { id, label } = useLocalSearchParams<{ id: string, label?: string }>();
 
     const tiles: Tile[] = id ? tileSets[id] || [] : [];
 
@@ -31,9 +31,9 @@ export default function PickupDetailScreen() {
     }
 
     return (
-        <ScrollView contentContainerStyle={{ padding: 20, gap: 20 }}>
-            <Text style={{ fontSize: 26, marginBottom: 10 }}>
-                {id?.toUpperCase()}
+        <ScrollView contentContainerStyle={{ padding: 20, gap: 20, backgroundColor: "#323232", flexGrow: 1 }}>
+            <Text style={{ fontSize: 26, marginBottom: 10, color: "#f0f0f0" }}>
+                {label?.toUpperCase()}
             </Text>
 
             {tiles.map((tile, index) => (

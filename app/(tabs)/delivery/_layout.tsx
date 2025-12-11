@@ -6,6 +6,9 @@ export default function DeliveryStack() {
             screenOptions={{
                 headerShown: true,
                 animation: "slide_from_right",
+                headerStyle: { backgroundColor: "#000000" },
+                headerTitleStyle: { color: "#f0f0f0" },
+                headerTintColor: "#f0f0f0",
             }}
         >
             <Stack.Screen

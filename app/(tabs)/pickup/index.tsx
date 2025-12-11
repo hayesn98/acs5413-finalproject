@@ -12,7 +12,7 @@ export default function PickupScreen() {
     ];
 
     return (
-        <ScrollView contentContainerStyle={{ padding: 20, gap: 20 }}>
+        <ScrollView contentContainerStyle={{ padding: 20, gap: 20, backgroundColor: "#323232" }}>
             {items.map((item) => (
                 <View
                     key={item.id}
@@ -44,7 +44,10 @@ export default function PickupScreen() {
                                 borderRadius: 8,
                                 alignItems: "center",
                             }}
-                            onPress={() => router.push(`/pickup/${item.id}`)}
+                            onPress={() => router.push({
+                                pathname: "/pickup/[id]",
+                                params: { id: item.id, label: item.label },
+                            })}
                         >
                             <Text style={{ color: "white" }}>View Items</Text>
                         </TouchableOpacity>
@@ -53,7 +56,7 @@ export default function PickupScreen() {
                             style={{
                                 flex: 1,
                                 padding: 10,
-                                backgroundColor: "#3b82f6",
+                                backgroundColor: "#8ca57d",
                                 borderRadius: 8,
                                 alignItems: "center",
                             }}

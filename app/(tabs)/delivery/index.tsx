@@ -14,7 +14,7 @@ export default function DeliveryScreen() {
     const router = useRouter();
 
     return (
-        <ScrollView contentContainerStyle={{ padding: 20, gap: 20 }}>
+        <ScrollView contentContainerStyle={{ padding: 20, gap: 20, backgroundColor: "#323232" }}>
             {tiles.map((tile) => (
                 <View
                     key={tile.id}
@@ -46,7 +46,10 @@ export default function DeliveryScreen() {
                                 borderRadius: 8,
                                 alignItems: "center",
                             }}
-                            onPress={() => router.push(`/delivery/${tile.id}`)}
+                            onPress={() => router.push({
+                                pathname: "/delivery/[id]",
+                                params: { id: tile.id, label: tile.label },
+                            })}
                         >
                             <Text style={{ color: "white" }}>View Items</Text>
                         </TouchableOpacity>
@@ -55,7 +58,7 @@ export default function DeliveryScreen() {
                             style={{
                                 flex: 1,
                                 padding: 10,
-                                backgroundColor: "#3b82f6",
+                                backgroundColor: "#8ca57d",
                                 borderRadius: 8,
                                 alignItems: "center",
                             }}

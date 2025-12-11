@@ -7,7 +7,7 @@ export default function BackButton() {
 
     return (
         <TouchableOpacity onPress={() => router.back()} style={{ padding: 10 }}>
-            <Text style={{ fontSize: 16, color: "#841617" }}>Back</Text>
+            <Text style={{ fontSize: 16, color: "#f0f0f0" }}>Back</Text>
         </TouchableOpacity>
     );
 }

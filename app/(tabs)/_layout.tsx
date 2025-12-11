@@ -19,7 +19,8 @@ export default function Layout() {
     return (
         <Tabs screenOptions={{
             tabBarActiveTintColor: "#841617",
-            headerShown: false
+            headerShown: false,
+            tabBarStyle: { backgroundColor: "#000000" },
         }}>
             <Tabs.Screen
                 name="delivery"
