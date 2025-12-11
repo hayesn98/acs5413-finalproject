@@ -1,13 +1,13 @@
 import { useRouter } from "expo-router";
-import { ScrollView, Text, TouchableOpacity, View } from "react-native";
+import { Image, ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 const tiles = [
-    { id: "pizzaff", label: "Pizza Fast Food", location: { latitude: 40.81472, longitude: -73.00007 } },
-    { id: "burgerff", label: "Burger Fast Food", location: { latitude: 40.88316, longitude: -74.29085 } },
-    { id: "coffeeshop", label: "Coffee Shop", location: { latitude: 40.75460, longitude: -74.03230 }},
-    { id: "friedchicken", label: "Fried Chicken", location: { latitude: 40.75630, longitude: -74.17363 }},
-    { id: "drinks", label: "Drinks", location: { latitude: 40.66113, longitude: -73.99708 }},
-    { id: "tacoff", label: "Taco Fast Food", location: { latitude: 40.77224, longitude: -74.23100 }},
+    { id: "pizzaff", label: "Pizza Fast Food", location: { latitude: 40.81472, longitude: -73.00007 }, image: { uri: "https://images.pexels.com/photos/825661/pexels-photo-825661.jpeg" } },
+    { id: "burgerff", label: "Burger Fast Food", location: { latitude: 40.88316, longitude: -74.29085 }, image: { uri: "https://images.pexels.com/photos/1639557/pexels-photo-1639557.jpeg" } },
+    { id: "coffeeshop", label: "Coffee Shop", location: { latitude: 40.75460, longitude: -74.03230 }, image: { uri: "https://images.pexels.com/photos/851555/pexels-photo-851555.jpeg" } },
+    { id: "friedchicken", label: "Fried Chicken", location: { latitude: 40.75630, longitude: -74.17363 }, image: { uri: "https://images.pexels.com/photos/2833499/pexels-photo-2833499.jpeg" } },
+    { id: "drinks", label: "Drinks", location: { latitude: 40.66113, longitude: -73.99708 }, image: { uri: "https://images.pexels.com/photos/1384039/pexels-photo-1384039.jpeg" } },
+    { id: "tacoff", label: "Taco Fast Food", location: { latitude: 40.77224, longitude: -74.23100 }, image: { uri: "https://images.pexels.com/photos/2087748/pexels-photo-2087748.jpeg" } },
 ];
 
 export default function DeliveryScreen() {
@@ -25,6 +25,17 @@ export default function DeliveryScreen() {
                     }}
                 >
                     <Text style={{ fontSize: 18, marginBottom: 10 }}>{tile.label}</Text>
+
+                    <Image
+                        source={tile.image}
+                        style={{
+                            width: "100%",
+                            height: 150,
+                            borderRadius: 12,
+                            marginBottom: 12,
+                        }}
+                        resizeMode="cover"
+                    />
 
                     <View style={{ flexDirection: "row", gap: 10 }}>
                         <TouchableOpacity

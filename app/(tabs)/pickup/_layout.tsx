@@ -7,6 +7,15 @@ export default function PickupStack() {
                 headerShown: true,
                 animation: "slide_from_right",
             }}
-        />
+        >
+            <Stack.Screen
+                name="index"
+                options={{ title: "Delivery Restaurants" }}
+            />
+            <Stack.Screen
+                name="[id]"
+                options={{ title: "Menu" }}
+            />           
+        </Stack> 
     );
 }
