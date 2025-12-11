@@ -13,7 +13,7 @@ import {
     deleteCartItem,
     fetchCartItems,
     updateCartItemQuantity
-} from "../firebase/firebaseCartAPI";
+} from "../../firebase/firebaseCartAPI";
 
 
 export default function CartScreen() {
