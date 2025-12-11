@@ -7,8 +7,12 @@ type Tile = {
 };
 
 const tileSets: Record<string, Tile[]> = {
-    pizza: [{ label: "Pepperoni" }, { label: "Margherita" }],
-    drinks: [{ label: "Coke" }, { label: "Lemonade" }],
+    pizzaff: [{ label: "Pepperoni" }, { label: "Margherita" }, { label: "Cheese"}, { label: "Meat Lovers"} ],
+    burgerff: [{ label: "Plain Burger" }, { label: "Cheeseburger" }, { label: "Mushroom and Swiss" }],
+    coffeeshop: [{ label: "Black Coffee" }, { label: "Flat White" }, { label: "Espresso" }, { label: "Cappuccino" }],
+    friedchicken: [{ label: "Chicken Basket" }, { label: "Chicken Nuggets" }, { label: "Chicken Fingers" }, { label: "BBQ Sauce" }],
+    drinks: [{ label: "Bottled Water" }, { label: "Coke" }, { label: "Gatorade" }, { label: "Orange Soda" }],
+    tacoff: [{ label: "Beef Taco" }, { label: "Chicken Taco" }, { label: "Bean Burrito" }, { label: "Cheese Burrito" }, { label: "Chips and Salsa" }],
 };
 
 export default function DeliveryDetailScreen() {

@@ -7,8 +7,12 @@ type Tile = {
 };
 
 const tileSets: Record<string, Tile[]> = {
-    pizza: [{ label: "Pepperoni" }, { label: "Margherita" }],
-    drinks: [{ label: "Coke" }, { label: "Lemonade" }],
+    steakres: [{ label: "Filet Dinner" }, { label: "T-Bone Dinner" }, { label: "Hanger Dinner"}, { label: "Short Rib Dinner"} ],
+    sushires: [{ label: "California Roll" }, { label: "Rainbow Roll" }, { label: "Sashimi Sampler" }, { label: "Miso Soup" }],
+    seafoodres: [{ label: "Fried Shrimp Basket" }, { label: "Lobster Spaghetti" }, { label: "Mahi Mahi Dinner" }, { label: "Ahi Tuna Salad" }],
+    britishpub: [{ label: "Fish and Chips" }, { label: "Bangers and Mash" }, { label: "Shepherd's Pie" }, { label: "Veal Cutlet" }],
+    indianres: [{ label: "Butter Chicken" }, { label: "Chicken Biryani" }, { label: "Chicken Curry" }, { label: "Naan Basket" }],
+    vietres: [{ label: "Steak Pho" }, { label: "Pork Banh Mi" }, { label: "Fresh Spring Roll" }, { label: "Shrimp Fried Rice" }, { label: "Lemongrass Chicken" }],
 };
 
 export default function PickupDetailScreen() {

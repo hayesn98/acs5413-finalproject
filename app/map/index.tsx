@@ -15,16 +15,17 @@ export default function MapScreen() {
     const region: Region = {
         latitude: params.latitude ? Number(params.latitude) : DEFAULT_REGION.latitude,
         longitude: params.longitude ? Number(params.longitude) : DEFAULT_REGION.longitude,
-        latitudeDelta: 0.1,
-        longitudeDelta: 0.1,
+        latitudeDelta: 0.001,
+        longitudeDelta: 0.001,
     };
 
     return (
         <View style={{ flex: 1 }}>
             <MapView
+                key={`${region.latitude},${region.longitude}`}
                 style={StyleSheet.absoluteFillObject}
                 provider={PROVIDER_GOOGLE}
-                initialRegion={region}
+                region={region}
             >
             <Marker coordinate={region} />
             </MapView>

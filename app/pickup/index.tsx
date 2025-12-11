@@ -3,16 +3,12 @@ import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 export default function PickupScreen() {
     const items = [
-        {
-            id: "pizza",
-            title: "Pizza",
-            location: { latitude: 44.5013, longitude: -88.0622 },
-        },
-        {
-            id: "drinks",
-            title: "Drinks",
-            location: { latitude: 35.19894, longitude: -97.44485 },
-        },
+    { id: "steakres", label: "Steak Restaurant", location: { latitude: 40.63713, longitude: -74.07557 } },
+    { id: "sushires", label: "Sushi Restaurant", location: { latitude: 40.58807, longitude: -73.67123 } },
+    { id: "seafoodres", label: "Seafood Restaurant", location: { latitude: 40.79062, longitude: -73.97246 }},
+    { id: "britishpub", label: "British Pub", location: { latitude: 40.66774, longitude: -73.98734 }},
+    { id: "indianres", label: "Indian Restaurant", location: { latitude: 40.76469, longitude: -73.01495 }},
+    { id: "vietres", label: "Vietnamese Restaurant", location: { latitude: 41.01381, longitude: -73.80395 }},
     ];
 
     return (
@@ -26,7 +22,7 @@ export default function PickupScreen() {
                         borderRadius: 16,
                     }}
                 >
-                    <Text style={{ fontSize: 18, marginBottom: 10 }}>{item.title}</Text>
+                    <Text style={{ fontSize: 18, marginBottom: 10 }}>{item.label}</Text>
 
                     <View style={{ flexDirection: "row", gap: 10 }}>
                         <TouchableOpacity

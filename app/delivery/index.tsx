@@ -2,8 +2,12 @@ import { useRouter } from "expo-router";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 
 const tiles = [
-    { id: "pizza", label: "Pizza", location: { latitude: 44.5013, longitude: -88.0622 } },
-    { id: "drinks", label: "Drinks", location: { latitude: 35.19894, longitude: -97.44485 } },
+    { id: "pizzaff", label: "Pizza Fast Food", location: { latitude: 40.81472, longitude: -73.00007 } },
+    { id: "burgerff", label: "Burger Fast Food", location: { latitude: 40.88316, longitude: -74.29085 } },
+    { id: "coffeeshop", label: "Coffee Shop", location: { latitude: 40.75460, longitude: -74.03230 }},
+    { id: "friedchicken", label: "Fried Chicken", location: { latitude: 40.75630, longitude: -74.17363 }},
+    { id: "drinks", label: "Drinks", location: { latitude: 40.66113, longitude: -73.99708 }},
+    { id: "tacoff", label: "Taco Fast Food", location: { latitude: 40.77224, longitude: -74.23100 }},
 ];
 
 export default function DeliveryScreen() {
